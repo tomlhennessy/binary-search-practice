@@ -43,7 +43,19 @@ class BinarySearchTree {
   }
 
   search(val) {
-    // Your code here
+    let currentNode = this.root;
+
+    while (currentNode !== null) {
+      if (val === currentNode.val) {
+        return true; // found the value
+      } else if (val < currentNode.val) {
+        currentNode = currentNode.left; // search in left subtree
+      } else {
+        currentNode = currentNode.right; // search in right subtree
+      }
+    }
+
+    return false; // value not found
   }
 
 
