@@ -60,17 +60,29 @@ class BinarySearchTree {
 
 
   preOrderTraversal(currentNode = this.root) {
-    // Your code here
+    if (node === null) return;
+
+    console.log(currentNode.val); // visit the current node
+    this.preOrderTraversal(currentNode.left); // traverse the left subtree
+    this.preOrderTraversal(currentNode.right); // traverse the right subtree
   }
 
 
   inOrderTraversal(currentNode = this.root) {
-    // Your code here
+    if (node === null) return;
+
+    this.inOrderTraversal(currentNode.left); // traverse the left subtree
+    console.log(currentNode.val); // visit the current node
+    this.inOrderTraveral(currentNode.right); // traverse the right subtree
   }
 
 
   postOrderTraversal(currentNode = this.root) {
-    // Your code here
+    if (node === null) return;
+
+    this.postOrderTraversal(currentNode.left); // traverse the left subtree
+    this.postOrderTraversal(currentNode.right); // traverse the right subtree
+    console.log(currentNode.val); // visit the current node
   }
 
     // Breadth First Traversal - Iterative
